@@ -1,18 +1,136 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Happy Birthday Shaista ❤️</title>
+<title>Happy Birthday Shaista ❤️</title>
+
+<style>
+body {
+  margin: 0;
+  text-align: center;
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  color: white;
+  font-family: Arial;
+  overflow-x: hidden;
+}
+
+h1 {
+  margin-top: 40px;
+  font-size: 40px;
+}
+
+.gallery img {
+  width: 200px;
+  margin: 10px;
+  border-radius: 15px;
+  transition: 0.3s;
+  box-shadow: 0 0 15px rgba(255,255,255,0.5);
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+#message {
+  max-width: 800px;
+  margin: 30px auto;
+  font-size: 18px;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+.heart {
+  position: fixed;
+  color: pink;
+  animation: float 5s linear infinite;
+}
+
+@keyframes float {
+  from { transform: translateY(100vh); opacity: 1; }
+  to { transform: translateY(-10vh); opacity: 0; }
+}
+</style>
+
 </head>
-<body style="text-align:center; background:pink; color:white; font-family:Arial;">
+
+<body>
 
 <h1>Happy Birthday Shaista ❤️</h1>
 
-<img src="photo1.jpg" width="200">
-<img src="photo2.jpg" width="200">
-<img src="photo3.jpg" width="200">
-<img src="photo4.jpg" width="200">
+<div class="gallery">
+  <img src="photo1.jpg">
+  <img src="photo2.jpg">
+  <img src="photo3.jpg">
+  <img src="photo4.jpg">
+</div>
 
-<p>HAPPY BIRTHDAY MY LOVE ❤️<br>I LOVE YOU SO MUCH 💖</p>
+<div id="message"></div>
+
+<audio autoplay loop>
+  <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const text = `HAPPY BIRTHDAY MY LOVE SHAISTAAA 😭❤️🫶🏻🎀💫🌸🤍✨🥺💍
+
+28 APRIL…
+I swear this date is not just a normal day for me anymore… it became the day my heart truly started to exist differently 🥹❤️
+
+Because on this day, MY SHAISTAA was born 😭🤍
+
+The most beautiful soul, the most precious smile, the one who owns my heart without even trying 🫶🏻🌙✨
+
+Today you turn 19 🎂🌸
+And I just keep thinking… how can one person be this perfect? 🥺🫶🏻🤍
+
+Tum meri mohabbat bhi ho ❤️
+Tum meri aadat bhi ho 🫶🏻
+Tum meri dua bhi ho 🤲🏻✨
+Aur tum woh khwab ho jo main kabhi khona nahi chahta 💍😭🤍
+
+I don’t just love you… I feel you in everything I do 🥺❤️
+
+Har pal tumhara khayal, har dua mein tumhara naam, har dhadkan mein tum 🫀✨
+
+Shaistaa… you are not “someone I love”…
+you are literally my heart outside my body 😭🤍🫶🏻
+
+Main tumse itna pyar karta hoon ke lafz chhote par jaate hain…
+Magar feeling kabhi kam nahi hoti 🥺❤️🔥
+
+Happy Birthday meri jaan 🎂🤍🎀
+May Allah make your life as beautiful as your smile 🤲🏻✨
+aur tumhe duniya ki har khushi mile jo tum deserve karti ho 🌸💫
+
+Aur suno…
+Main hamesha tumhara rahunga ❤️😭💍
+28 APRIL sirf tumhara din nahi…
+yeh meri rooh ka sab se pyara din hai…
+
+I LOVE YOU SO MUCH SHAAISTAAAA 😭❤️💍✨
+
+ALWAYS AND FOREVER 🫶🏻😭🤍`;
+
+let i = 0;
+function type() {
+  if (i < text.length) {
+    document.getElementById("message").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(type, 30);
+  }
+}
+type();
+
+// floating hearts
+setInterval(() => {
+  let heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = "❤️";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = Math.random() * 20 + 10 + "px";
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 5000);
+}, 300);
+</script>
 
 </body>
 </html>
